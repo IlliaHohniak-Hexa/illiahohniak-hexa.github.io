@@ -1,0 +1,37 @@
+$breakpoint-tablet: 768px;
+$breakpoint-desktop-s: 1023px;
+$breakpoint-desktop-m: 1200px;
+$breakpoint-desktop-l: 1439px;
+$breakpoint-desktop-x: 1899px;
+
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('../../fonts/ProximaNova-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('../../fonts/Proxima Nova Bold.otf');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Intro';
+  src: url('../../fonts/IntroRegular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Intro';
+  src: url('../../fonts/IntroBlackItalic.otf');
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Intro';
+  src: url('../../fonts/IntroBlack.otf');
+  font-weight: 800;
+  font-style: normal;
+}

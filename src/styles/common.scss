@@ -1,0 +1,612 @@
+@import "untils/variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  font-size: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.header {
+  position: relative;
+  z-index: 10;
+  font-family: 'ProximaNova', sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  text-transform: uppercase;
+  background: #fff;
+  height: 56px;
+
+  &__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    justify-content: space-between;
+
+    @media (min-width: $breakpoint-tablet) {
+      width: 100%;
+      padding: 0 15px;
+    }
+    @media (min-width: $breakpoint-desktop-s) {
+      font-size: 13px;
+      width: 100%;
+      padding: 0 30px;
+    }
+    @media (min-width: $breakpoint-desktop-m) {
+      width: 1140px;
+      margin: 0 auto;
+      padding: 0;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    @media (min-width: $breakpoint-tablet) {
+      margin-right: 32px;
+    }
+  }
+  &__descr {
+    display: none;
+    @media (min-width: $breakpoint-tablet) {
+      display: block;
+    }
+  }
+  &__phone {
+    font-weight: bold;
+    font-size: 18px;
+
+    @media (min-width: $breakpoint-tablet) {
+      font-size: 30px;
+    }
+    @media (min-width: $breakpoint-desktop-s) {
+      font-size: 35px;
+    }
+  }
+  &__call-btn {
+    width: 130px;
+    height: 30px;
+    margin-left: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: none;
+    color: white;
+    line-height: 30px;
+    text-align: center;
+    background: rgb(255,79,88);
+    background: linear-gradient(90deg, rgba(255,79,88,1) 0%, rgba(253,112,72,1) 100%);
+    cursor: pointer;
+  }
+}
+
+.menu {
+  position: relative;
+  z-index: 10;
+  font-family: 'ProximaNova', sans-serif;
+  font-weight: normal;
+  color: white;
+  text-transform: uppercase;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.6;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 35px;
+    list-style: none;
+    padding: 0 5px;
+
+    @media (min-width: $breakpoint-tablet) {
+      width: 100%;
+      padding: 0 15px;
+    }
+    @media (min-width: $breakpoint-desktop-s) {
+      width: 100%;
+      padding: 0 30px;
+    }
+    @media (min-width: $breakpoint-desktop-m) {
+      width: 950px;
+      margin: 0 auto;
+      padding: 0;
+    }
+  }
+  &__item {
+    position: relative;
+    font-size: 11px;
+    line-height: 16px;
+    padding-right: 10px;
+    border-right: 1px solid white;
+
+    @media (min-width: $breakpoint-tablet) {
+      font-size: 14px;
+      padding-right: 30px;
+    }
+    @media (min-width: $breakpoint-desktop-s) {
+      padding-right: 64px;
+    }
+
+    &:last-child {
+      padding: 0;
+      border: none;
+    }
+
+    //&:after {
+    //  content: '';
+    //  position: absolute;
+    //  right: 64px;
+    //}
+  }
+}
+
+
+
+
+
+
+.promo {
+  position: relative;
+  margin-top: -35px;
+
+  &__slider {
+    width: 100%;
+    margin: 0;
+    height: calc(100vh - 56px);
+    overflow: hidden;
+
+    @media (min-width: $breakpoint-tablet) {
+      height: 797px;
+      overflow: unset;
+    }
+  }
+  &__slider-item {
+    width: 100vw;
+    position: relative;
+  }
+  .slick-list {
+    @media (min-width: $breakpoint-desktop-x) {
+      height: 797px;
+    }
+  }
+  .slick-arrow {
+    z-index: 11;
+    content: "";
+    width: 30px;
+    height: 44px;
+
+    @media (min-width: $breakpoint-desktop-s) {
+      top: 459px;
+    }
+
+    @media (min-width: $breakpoint-desktop-l) {
+      top: 459px;
+    }
+
+    &:before {
+      display: none;
+    }
+  }
+  .slick-prev {
+    background: url("../../img/arrow-left.svg") center center no-repeat;
+    @media (min-width: $breakpoint-desktop-s) {
+      left: 90px;
+    }
+    @media (min-width: $breakpoint-desktop-m) {
+      left: 152px;
+    }
+    @media (min-width: $breakpoint-desktop-l) {
+      left: 376px;
+    }
+    @media (min-width: $breakpoint-desktop-x) {
+      left: 376px;
+    }
+  }
+  .slick-next {
+    background: url("../../img/arrow-right.svg") center center no-repeat;
+    @media (min-width: $breakpoint-desktop-s) {
+      left: 301px;
+    }
+    @media (min-width: $breakpoint-desktop-m) {
+      left: 363px;
+    }
+    @media (min-width: $breakpoint-desktop-l) {
+      left: 587px;
+    }
+    @media (min-width: $breakpoint-desktop-x) {
+      left: 587px;
+    }
+  }
+  .slick-dots {
+    z-index: 11;
+    width: auto;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media (min-width: $breakpoint-tablet) {
+      bottom: 55px;
+    }
+    @media (min-width: $breakpoint-desktop-s) {
+      left: 151px;
+      top: 450px;
+      bottom: unset;
+      transform: unset;
+    }
+    @media (min-width: $breakpoint-desktop-m) {
+      left: 213px;
+    }
+    @media (min-width: $breakpoint-desktop-l) {
+      left: 437px;
+    }
+    @media (min-width: $breakpoint-desktop-x) {
+      left: 437px;
+    }
+
+    li {
+      position: relative;
+      width: 15px;
+      height: 15px;
+      border: 2px solid white;
+      background-color: #000;
+      border-radius: 50%;
+      margin: 0 7px;
+    }
+    //li button{
+    //  width: 15px;
+    //  height: 15px;
+    //  border: 2px solid white;
+    //  background-color: #000;
+    //}
+    .slick-active {
+      &:before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 7px;
+        height: 7px;
+        left: 50%;
+        top: 50%;
+        margin-left: -4px;
+        margin-top: -4px;
+        background-color: #fff;
+        border-radius: 50%;
+      }
+    }
+  }
+  .slick-dotted.slick-slider {
+    margin: 0;
+  }
+
+
+
+  &__background {
+    position: absolute;
+    z-index: 10;
+    top: 35px;
+    left: 0;
+    bottom: 0;
+    width: 190px;
+    background: #000;
+    opacity: 0.4;
+    clip-path: polygon(0 0, 100% 0%, 35% 100%, 0% 100%);
+
+    @media (min-width: $breakpoint-tablet) {
+      bottom: 0;
+      width: 290px;
+      clip-path: polygon(0 0, 100% 0%, 35% 100%, 0% 100%);
+    }
+    @media (min-width: $breakpoint-desktop-s) {
+      width: 380px;
+      height: 462px;
+      bottom: unset;
+      clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+    }
+    @media (min-width: $breakpoint-desktop-m) {
+      width: 790px;
+      height: 490px;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    z-index: 11;
+    top: 70px;
+    left: 20px;
+
+    @media (min-width: $breakpoint-tablet) {
+      left: 50px;
+    }
+    @media (min-width: $breakpoint-desktop-s) {
+      top: 70px;
+      left: 60px;
+    }
+    @media (min-width: $breakpoint-desktop-m) {
+      left: 357px;
+    }
+  }
+  &__headers {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 11px;
+      bottom: 0;
+      width: 5px;
+      background: #fff;
+      transform: skew(-16deg, 0deg);
+    }
+  }
+  &__header-container {
+    position: relative;
+    height: 110px;
+    margin-bottom: 10px;
+    margin-left: 37px;
+  }
+  &__header {
+    position: relative;
+    z-index: 12;
+    height: 110px;
+    padding: 0 22px 0 16px;
+    font-family: 'Intro', sans-serif;
+    font-size: 50px;
+    line-height: 110px;
+    text-transform: uppercase;
+
+    @media (min-width: $breakpoint-tablet) {
+      font-size: 90px;
+    }
+  }
+  &__header-bg {
+    position: absolute;
+    z-index: 11;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    opacity: 0.7;
+    transform: skew(-15deg, 0deg);
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+  &__type-container {
+    position: relative;
+    z-index: 12;
+    height: 50px;
+    margin-right: 10px;
+    margin-left: 20px;
+
+    @media (min-width: $breakpoint-tablet) {
+      margin-left: 10px;
+      height: 65px;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      z-index: 12;
+      bottom: 13px;
+      left: 22px;
+      right: 27px;
+      height: 3px;
+      background: #000;
+    }
+  }
+  &__type {
+    position: relative;
+    z-index: 12;
+    padding: 0 34px 0 38px;
+    font-family: 'Intro', sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 25px;
+
+    @media (min-width: $breakpoint-tablet) {
+      font-size: 36px;
+    }
+  }
+  &__type-bg {
+    position: absolute;
+    z-index: 11;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    opacity: 0.7;
+    transform: skew(-15deg, 0deg);
+  }
+  &__area-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 35px;
+    margin-top: 8px;
+
+    @media (min-width: $breakpoint-tablet) {
+      height: 50px;
+    }
+  }
+  &__area {
+    position: relative;
+    z-index: 12;
+    padding: 0 19px 0 9px;
+    font-family: 'Intro', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 16px;
+    color: white;
+
+    span {
+      display: inline-block;
+      padding: 0 10px;
+      font-family: 'Intro', sans-serif;
+      font-weight: 800;
+      font-style: normal;
+      font-size: 31px;
+
+      @media (min-width: $breakpoint-tablet) {
+        padding: 0 17px 0 23px;
+        font-size: 42px;
+        line-height: 42px;
+      }
+    }
+  }
+  &__area-bg {
+    position: absolute;
+    z-index: 11;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgb(42,235,42);
+    background: linear-gradient(90deg, rgba(42,235,42,1) 0%, rgba(0,117,0,1) 100%);
+    transform: skew(-15deg, 0deg);
+    box-shadow: 5px 5px 5px 0 #000;
+  }
+
+  &__text {
+    margin-top: 21px;
+    margin-bottom: 20px;
+    margin-left: 33px;
+    font-family: 'ProximaNova', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    text-transform: uppercase;
+    color: white;
+    font-size: 19px;
+  }
+
+  &__btn {
+    width: 230px;
+    height: 50px;
+    margin-left: 33px;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-family: 'ProximaNova', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    text-transform: uppercase;
+    color: white;
+    font-size: 23px;
+    line-height: 46px;
+    text-align: center;
+    background: rgb(255,79,88);
+    background: linear-gradient(90deg, rgba(255,79,88,1) 0%, rgba(253,112,72,1) 100%);
+    cursor: pointer;
+  }
+}
+
+
+.advantages {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+
+  @media (min-width: $breakpoint-desktop-s) {
+    position: absolute;
+    padding: 0 30px;
+    opacity: 0.8;
+  }
+  @media (min-width: $breakpoint-desktop-m) {
+    padding: 0;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1141px;
+    margin: 0 auto;
+    padding-top: 23px;
+    padding-bottom: 21px;
+
+    //@media (min-width: $breakpoint-tablet) {
+      flex-wrap: wrap;
+      padding-left: 15px;
+      padding-right: 15px;
+    //}
+    @media (min-width: $breakpoint-desktop-s) {
+      flex-wrap: nowrap;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    @media (min-width: $breakpoint-desktop-m) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 10px;
+    text-align: center;
+
+    @media (min-width: $breakpoint-tablet) {
+      flex-shrink: 0;
+      width: 45%;
+      margin-right: 10px;
+    }
+    @media (min-width: $breakpoint-desktop-s) {
+      flex: 1 0 22%;
+      margin-right: 26px;
+      margin-bottom: 0;
+    }
+    @media (min-width: $breakpoint-desktop-m) {
+      margin-right: 46px;
+    }
+
+    &:nth-child(even) {
+      @media (min-width: $breakpoint-tablet) {
+        margin-right: 0;
+      }
+      @media (min-width: $breakpoint-desktop-s) {
+        margin-right: 26px;
+      }
+      @media (min-width: $breakpoint-desktop-m) {
+        margin-right: 46px;
+      }
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__img {
+    margin-bottom: 15px;
+  }
+  &__header {
+    margin-bottom: 10px;
+    font-family: 'ProximaNova', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 21px;
+  }
+  &__descr {
+    font-family: 'ProximaNova', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 15px;
+  }
+}

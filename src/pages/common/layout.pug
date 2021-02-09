@@ -1,0 +1,28 @@
+doctype html
+html(lang='ua')
+    block head
+        head
+            meta(charset='UTF-8')
+            title Test from Illia
+            meta(name='viewport' content='width=device-width, initial-scale=1')
+            //link(rel='preconnect' href='https://fonts.gstatic.com')
+            //link(href='https://fonts.googleapis.com/css2?family=PT+Sans&display=swap' rel='stylesheet')
+            //link(href='https://fonts.googleapis.com/css2?family=Oswald&family=PT+Sans&display=swap' rel='stylesheet')
+            link(rel='stylesheet' type='text/css' href='../../css/external/slick.min.css')
+            link(rel='stylesheet' type='text/css' href='../../css/external/slick-theme.min.css')
+            link(rel='stylesheet' type='text/css' href='../../css/styles/common.min.css')
+    body
+        block header
+            include header
+
+        block content
+
+        block footer
+            include footer
+
+        block scripts
+            script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+            //script (src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+            //script(type='text/javascript' src="http://code.jquery.com/jquery-1.10.1.min.js")
+            script(type='text/javascript' src='../../js/external/slick/slick.min.min.js')
+            script(type='text/javascript' src='../../js/scripts/common.min.js')
